@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>Halaman Login RM</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcbabe;">
@@ -20,8 +20,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Login <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Home</a>
+          <a class="nav-item nav-link active" href="index.php">Login <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="home.php">Home</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@
             <label>Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary" name="login">Login</button>
         </form>
       </div>
     </div>

@@ -19,12 +19,11 @@ function query($query)
 function tambah($data)
 {
 	global $conn;
-	$nama_barang = $data["nama_barang"];
-	$harga_barang = $data["harga_barang"];
-	$stock_barang = $data["stock_barang"];
+	$email = $data["email"];
+	$password = $data["password"];
 
  	//query insert
-	$query = "INSERT INTO barang VALUES ('$nama_barang','$harga_barang','$stock_barang')";
+	$query = "INSERT INTO user VALUES ('$email','$password')";
 	mysqli_query($conn, $query);
 	return mysqli_affected_rows($conn);
 }
