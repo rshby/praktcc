@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>Halaman Login RM</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcbabe;">
@@ -27,39 +28,28 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col">
-        <h2>RM. Murah Meriah</h2>
-      </div>
-    </div>
+  <div class="container isi-tengah">
+
 
     <div class="row mt-3">
-      <div class="col">
-        <h4>Harap Login Terlebih Dahulu</h4>
-      </div>
-    </div>
+      <div class="col-sm-4 putih">
+        <h2 style="font-weight: bold;">RM. Murah Meriah</h2>
+        <h4 style="font-weight: bold;">Harap Login Terlebih Dahulu</h4>
 
-    <div class="row mt-3">
-      <div class="col-sm-4">
         <form>
           <div class="form-group">
-            <label>Email address</label>
+            <label style="font-weight: bold;">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
-            <label>Password</label>
+            <label style="font-weight: bold;">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1">
           </div>
           <button type="submit" class="btn btn-primary" name="login">Login</button>
         </form>
+
+        <p style="font-weight: bold;">Belum punya Akun? <a href="daftar.php">Daftar Disini</a></p>
       </div>
-    </div>
-    
-    <div class="row mt-2">
-      <div class="col">
-        <p>Belum punya Akun? <a href="daftar.php">Daftar Disini</a></p>
-      </div>      
     </div>
 
   <!-- Batas Div Container -->  
