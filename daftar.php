@@ -1,5 +1,8 @@
+<?php 
 
-<!doctype html>
+ ?>
+
+ <!doctype html>
 <html lang="en">
 <head>
   <!-- Required meta tags -->
@@ -29,15 +32,9 @@
 
   <div class="container">
     <div class="row mt-3">
-      <div class="col">
-        <h2>RM. Murah Meriah</h2>
-      </div>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col">
-        <h4>Harap Login Terlebih Dahulu</h4>
-      </div>
+    	<div class="col">
+    		<h4>Pendaftaran Akun</h4>
+    	</div>
     </div>
 
     <div class="row mt-3">
