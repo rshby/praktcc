@@ -1,3 +1,48 @@
+<?php 
+//awalan session
+session_start();
+
+//bukan file koneksi
+require 'koneksi.php';
+
+//cek jika sudah login tdk bisa akses file ini
+if ( isset($_SESSION["login"])) 
+{
+	header("location:home.php");
+	exit;
+}
+
+//jika tombol login di klik
+if( isset($_POST["login"]) )
+{
+	$email = $_POST["email"];
+	$password = $_POST["password"];
+
+	$result = mysqli_query($conn, "SELECT * FROM user WHERE email ='$email' AND password='$password'");
+
+	//hitung jumlah data yg ditemukan
+	$cek = mysqli_num_rows($result);
+
+	//cek jika data ditemukan
+	if( $cek == 1 )
+	{
+		//set session boolean
+		$_SESSION['login'] = true;
+
+		//pindah ke halaman index.php
+		header("location:home.php");
+		exit;
+	}
+	else
+	{
+		echo '<script language="javascript">';
+ 		echo 'alert("Username dan Password salah")'; 
+ 		echo '</script>';
+ 	}	
+
+ }
+ ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -10,7 +55,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>Halaman Login RM</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcbabe;">
@@ -33,22 +77,22 @@
 
     <div class="row mt-3">
       <div class="col-sm-4 putih">
-        <h2 style="font-weight: bold;">RM. Murah Meriah</h2>
-        <h4 style="font-weight: bold;">Harap Login Terlebih Dahulu</h4>
+        <h2 >RM. Murah Meriah</h2>
+        <h4 >Harap Login Terlebih Dahulu</h4>
 
-        <form>
+        <form method="post" action="">
           <div class="form-group">
-            <label style="font-weight: bold;">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label >Email address</label>
+            <input type="text" class="form-control" name="email">
           </div>
           <div class="form-group">
-            <label style="font-weight: bold;">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label >Password</label>
+            <input type="password" class="form-control" name="password">
           </div>
           <button type="submit" class="btn btn-primary" name="login">Login</button>
         </form>
 
-        <p style="font-weight: bold;">Belum punya Akun? <a href="daftar.php">Daftar Disini</a></p>
+        <p >Belum punya Akun? <a href="daftar.php">Daftar Disini</a></p>
       </div>
     </div>
 
@@ -62,3 +106,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
+

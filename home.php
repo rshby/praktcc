@@ -34,7 +34,7 @@
 	<div class="container">
 		<div class="row mt-3">
 			<div class="col">
-				<a href="" class="badge badge-danger">Logout</a>
+				<a href="" class="badge badge-danger float-right">Logout</a>
 			</div>
 		</div>
 
