@@ -1,5 +1,13 @@
 <?php 
+//awalan session
+session_start();
 
+//cek belum login tdk bisa akses file ini
+if ( !isset($_SESSION["login"])) 
+{
+	header("location:index.php");
+	exit;
+}
 ?>
 
 
@@ -18,7 +26,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcbabe;">
 		<div class="container">
-			<a class="navbar-brand" href="#">Navbar</a>
+			<a class="navbar-brand" href="home.php">RM Padang</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -34,7 +42,7 @@
 	<div class="container">
 		<div class="row mt-3">
 			<div class="col">
-				<a href="" class="badge badge-danger float-right">Logout</a>
+				<a href="logout.php" class="badge badge-danger float-right">Logout</a>
 			</div>
 		</div>
 
@@ -45,10 +53,10 @@
 		</div>
 
 		<div class="row mt-3">
-			<?php for ($i=1; $i <=2 ; $i++) 
+			<?php for ($i=1; $i <=6 ; $i++) 
 			{ ?> 
 				<div class="col-sm-4">
-					<div class="card" style="box-shadow: 7px 7px 9px grey;">
+					<div class="card mb-3" style="box-shadow: 7px 7px 9px grey;">
 						<img src="img/gambar<?=$i?>.jpg" class="card-img-top rounded" alt="...">
 					</div>
 				</div>

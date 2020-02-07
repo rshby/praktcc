@@ -59,7 +59,7 @@ if( isset($_POST["login"]) )
 <body>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #bcbabe;">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="home.php">RM Padang</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
